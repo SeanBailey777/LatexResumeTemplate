@@ -10,7 +10,7 @@ Modified from https://www.overleaf.com/latex/templates/asu-resume-template/jtwpd
 
 ## to view the PDF file of the resume:
 
-Please open the resume.pdf file.
+Please open [the resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/resume.pdf) file.
 
 ## To build pdf in ubuntu:
 

@@ -4,13 +4,17 @@
 
 Modified from https://www.overleaf.com/latex/templates/asu-resume-template/jtwpddspxjtm
 
-- Author: Vignesh V Iyer
+- Original latex Author: Vignesh V Iyer
 - License: Creative Commons CC BY 4.0
 - Abstract: This template represents popular computer science resume format at Arizona State University in latex.
 
+
+## Augmented by:
+shell script author: SeanKuo7
+
 ## to view the PDF file of the resume:
 
-Please open [the resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/Sean.Bailey.Resume.pdf) file.
+Please open [this resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/Sean.Bailey.Resume.pdf) file.
 
 ## To build pdf in ubuntu:
 

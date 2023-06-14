@@ -1,7 +1,7 @@
 # LatexResumeTemplate
 
 ## Description
-This is Sean Bailey's Resume built with LaTeX
+This is Sean Bailey's Resume built with [LaTeX](https://www.latex-project.org/) 
 
 ## To download the PDF file of the resume from stable release:
 Please open [this link](https://github.com/SeanKuo7/LatexResumeTemplate/releases)

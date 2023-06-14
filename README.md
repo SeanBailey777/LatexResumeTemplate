@@ -8,6 +8,10 @@ Modified from https://www.overleaf.com/latex/templates/asu-resume-template/jtwpd
 - License: Creative Commons CC BY 4.0
 - Abstract: This template represents popular computer science resume format at Arizona State University in latex.
 
+## to view the PDF file of the resume:
+
+Please open the resume.pdf file.
+
 ## To build pdf in ubuntu:
 
 ```

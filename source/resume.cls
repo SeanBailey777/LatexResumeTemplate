@@ -9,7 +9,7 @@
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
 % set document margins
-\usepackage[left=0.5 in,top=0.4in,right=0.5in,bottom=0.4in]{geometry}
+\usepackage[left=0.5 in,top=0.4in,right=0.5in,bottom=0.2in]{geometry}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 
 \usepackage{keycommand}

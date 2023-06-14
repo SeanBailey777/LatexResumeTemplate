@@ -15,6 +15,8 @@
 \usepackage{keycommand}
 \usepackage{xstring}
 \usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{blindtext}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,

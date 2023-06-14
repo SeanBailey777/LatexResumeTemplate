@@ -87,8 +87,8 @@
     \vspace{-0.3em}
 }
 
-\newkeycommand{\educationItem}[university,college,program,graduation,grade,coursework]{
-    {\bf \commandkey{program}} \hfill {Graduating \commandkey{graduation}} \\
+\newkeycommand{\educationItem}[university,college,program,location,graduation,coursework]{
+    {\bf \commandkey{program}} \hfill {\ifcommandkey{location}{\commandkey{location}; }{}{\textit{\textbf{\commandkey{graduation}}}}} \\
     {\commandkey{university}} 
     \ifcommandkey{college}{\commandkey{college}}{} \\
     \ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
@@ -102,12 +102,12 @@
 }
 
 \newkeycommand{\skillItem}[category, skills]{
-    {\bf \commandkey{category}: }{\commandkey{skills}}
+    { \textit{\textbf{\commandkey{category}}}: }{\commandkey{skills}}
 }
 
 \newenvironment{workSection}[1]{
   \textbf{\MakeUppercase{#1}}
-  \vspace{0.4em}
+  \vspace{0.4em} % todo vspace
   \hrule
   \vspace{-0.3em}
   \begin{list}{}{ % List for each individual item in the section

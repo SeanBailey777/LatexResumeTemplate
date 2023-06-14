@@ -95,7 +95,7 @@
 }
 
 \newcommand{\skills}{
-    \textbf{\MakeUppercase{Technical skills}}
+    \textbf{\MakeUppercase{Technical skills \& Features}}
     \vspace{0.4em}
     \hrule
     \vspace{-0.3em}

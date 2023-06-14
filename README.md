@@ -20,7 +20,7 @@ Please open [this Sean.Bailey.Resume.pdf](https://github.com/SeanKuo7/LatexResum
 
 ```
 sudo apt install texlive-full -y # skipped if already had
-./build.sh
+./build.sh # ^D to exit
 ```
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]

@@ -16,7 +16,7 @@ Please open [the resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blo
 
 ```
 sudo apt install texlive-full -y # skipped if already had
-pdflatex ./resume.tex 
+./build.sh
 ```
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]

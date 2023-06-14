@@ -14,7 +14,7 @@ shell script author: SeanKuo7
 
 ## to view the PDF file of the resume:
 
-Please open [this resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/Sean.Bailey.Resume.pdf) file.
+Please open [this Sean.Bailey.Resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/Sean.Bailey.Resume.pdf) file.
 
 ## To build pdf in ubuntu:
 

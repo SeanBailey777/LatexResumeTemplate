@@ -3,10 +3,10 @@
 ## Description
 This is Sean Bailey's Resume built with [LaTeX](https://www.latex-project.org/) 
 
-## To download the PDF file of the resume from stable release:
+## Download (Official Release):
 Please open [this link](https://github.com/SeanKuo7/LatexResumeTemplate/releases)
 
-## To view the PDF file of the resume from current developing version:
+## View latest development:
 Please open [this Sean.Bailey.Resume.pdf](https://github.com/SeanKuo7/LatexResumeTemplate/blob/main/Sean.Bailey.Resume.pdf) file.
 
 ## Original Author

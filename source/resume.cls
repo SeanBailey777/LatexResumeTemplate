@@ -6,7 +6,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2023/03/18 v0.1 Resume class]
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+\LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
 % set document margins
 \usepackage[left=0.5 in,top=0.4in,right=0.5in,bottom=0.2in]{geometry}
@@ -42,28 +42,28 @@
 }
 
 \newcommand{\printContactInformation}{%
-  \vspace{-0.3em} % remove vertical space above
-  \begin{center}
-    \ifcommandkey{phone}{%
-        \commandkey{phone}%
-        \ifcommandkey{email}{ \separator\ }%
+    \vspace{-0.3em} % remove vertical space above
+    \begin{center}
+        \ifcommandkey{phone}{%
+            \commandkey{phone}%
+            \ifcommandkey{email}{ \separator\ }%
             {\ifcommandkey{linkedin}{ \separator\ }%
                 {\ifcommandkey{github}{ \separator\ }%
                     {}}}%
-    }{}%
-    \ifcommandkey{email}{%
-        \email{\commandkey{email}}%
+        }{}%
+        \ifcommandkey{email}{%
+            \email{\commandkey{email}}%
             \ifcommandkey{linkedin}{ \separator\ }%
-                {\ifcommandkey{github}{ \separator\ }}%
-    }{}%
-    \ifcommandkey{linkedin}{%
+            {\ifcommandkey{github}{ \separator\ }}%
+        }{}%
+        \ifcommandkey{linkedin}{%
             \profilelink{\commandkey{linkedin}}%
             \ifcommandkey{github}{ \separator\ }{}%
-    }{}%
-    \ifcommandkey{github}{%
-        \profilelink{\commandkey{github}}%
-    }{}%
-  \end{center}
+        }{}%
+        \ifcommandkey{github}{%
+            \profilelink{\commandkey{github}}%
+        }{}%
+    \end{center}
 }
 
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
@@ -74,30 +74,33 @@
     \printContactInformation
 }
 
-\newcommand{\summary}[1]{
-    \textbf{\MakeUppercase{Summary}}
+\newcommand{\Objective}[1]{
+    \textbf{\MakeUppercase{career objective}}
     \vspace{0.4em}
     \hrule
     \vspace{-0.3em}
     #1
 }
 
-\newcommand{\education}{
-    \textbf{\MakeUppercase{Education}}
+\newenvironment{summary}{
+    \textbf{\MakeUppercase{Professional Summary}}
     \vspace{0.4em}
     \hrule
     \vspace{-0.3em}
+    \begin{list}{}{ % List for each individual item in the section
+            \setlength{\leftmargin}{0em} % Margin within the section
+        }
+        \item[]
+            }{
+    \end{list}
 }
 
-\newkeycommand{\educationItem}[university,college,program,location,graduation,coursework]{
-    {\bf \commandkey{program}} \hfill {\ifcommandkey{location}{\commandkey{location}; }{}{\textit{\textbf{\commandkey{graduation}}}}} \\
-    {\commandkey{university}} 
-    \ifcommandkey{college}{\commandkey{college}}{} \\
-    \ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
+\newkeycommand{\summaryItem}[bulletin]{
+    {\commandkey{bulletin}}
 }
 
 \newcommand{\skills}{
-    \textbf{\MakeUppercase{Technical skills \& Features}}
+    \textbf{\MakeUppercase{Technical skills}}
     \vspace{0.4em}
     \hrule
     \vspace{-0.3em}
@@ -108,24 +111,41 @@
 }
 
 \newenvironment{workSection}[1]{
-  \textbf{\MakeUppercase{#1}}
-  \vspace{0.4em} % todo vspace
-  \hrule
-  \vspace{-0.3em}
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0em} % Margin within the section
-  }
-  \item[]
-}{
-  \end{list}
+    \textbf{\MakeUppercase{#1}}
+    \vspace{0.4em} % todo vspace
+    \hrule
+    \vspace{-0.3em}
+    \begin{list}{}{ % List for each individual item in the section
+            \setlength{\leftmargin}{0em} % Margin within the section
+        }
+        \item[]
+            }{
+    \end{list}
 }
 
 
 \newkeycommand{\experienceItem}[company, position, location, duration]{
-    {\commandkey{position}} @ \textit{\textbf{\commandkey{company}}} \hfill {\commandkey{location}; \textit{\textbf{\commandkey{duration}}}}
+    {\commandkey{company}\hfill{\commandkey{location}}\\
+            \textit{\textbf{\commandkey{position}}}\hfill
+            \textit{\textbf{\commandkey{duration}}}}\\
+    \vspace{-11pt}
 }
+
 
 \newkeycommand{\customItem}[title, duration, keyHighlight]{
     \textbf{\commandkey{title}} \hfill {\commandkey{duration}} \\
     \ifcommandkey{keyHighlight}{\commandkey{keyHighlight}}{}
+}
+
+\newcommand{\education}{
+    \textbf{\MakeUppercase{Education}}
+    \vspace{0.4em}
+    \hrule
+    \vspace{-0.3em}
+}
+
+\newkeycommand{\educationItem}[university,college,program,location,graduation,coursework]{
+    {\bf \commandkey{program}} | {\commandkey{university}}\hfill {\ifcommandkey{location}{\commandkey{location}}{}{\textit{\textbf{\commandkey{graduation}}}}} \\
+    %\ifcommandkey{college}{\commandkey{college}}{} %\\
+    %\ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
 }

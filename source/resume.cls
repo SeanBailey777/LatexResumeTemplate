@@ -145,7 +145,9 @@
 }
 
 \newkeycommand{\educationItem}[university,college,program,location,graduation,coursework]{
-    {\bf \commandkey{program}} | {\commandkey{university}}\hfill {\ifcommandkey{location}{\commandkey{location}}{}{\textit{\textbf{\commandkey{graduation}}}}} \\
-    %\ifcommandkey{college}{\commandkey{college}}{} %\\
-    %\ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
+{\bf \commandkey{program}} | {\commandkey{university}}\hfill
+{\ifcommandkey{location}{\commandkey{location}}{}} | 
+{\ifcommandkey{graduation}{\textit{\textbf{\commandkey{graduation}}}}{}} \\
+%\ifcommandkey{college}{\commandkey{college}}{} %\\
+%\ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
 }

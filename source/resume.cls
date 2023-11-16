@@ -56,12 +56,13 @@
             \ifcommandkey{linkedin}{ \separator\ }%
             {\ifcommandkey{github}{ \separator\ }}%
         }{}%
-        \ifcommandkey{linkedin}{%
-            \profilelink{\commandkey{linkedin}}%
-            \ifcommandkey{github}{ \separator\ }{}%
-        }{}%
         \ifcommandkey{github}{%
             \profilelink{\commandkey{github}}%
+            \ifcommandkey{linkedin}{ \separator\ }{}%
+        }{}%
+        \ifcommandkey{linkedin}{%
+            \profilelink{\commandkey{linkedin}}%
+            
         }{}%
     \end{center}
 }
@@ -83,7 +84,7 @@
 }
 
 \newenvironment{summary}{
-    \textbf{\MakeUppercase{Professional Summary}}
+    \textbf{\MakeUppercase{Summary}}
     \vspace{0.4em}
     \hrule
     \vspace{-0.3em}

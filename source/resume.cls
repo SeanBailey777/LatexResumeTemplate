@@ -34,7 +34,7 @@
 
 \newcommand\printNameTitle[1]{%
     \begingroup
-    \hfill{\MakeUppercase{\Huge\bfseries #1}}\hfill
+    \hfill{\Huge\bfseries #1}\hfill
     \break
     \vspace{-0.5em}
     \hrule

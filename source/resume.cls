@@ -53,8 +53,14 @@
         }{}%
         \ifcommandkey{email}{%
             \email{\commandkey{email}}%
-            \ifcommandkey{linkedin}{ \separator\ }%
-            {\ifcommandkey{github}{ \separator\ }}%
+            \ifcommandkey{location}{ \separator\ }%
+            {\ifcommandkey{github}{ \separator\ }%
+                {\ifcommandkey{linkedin}{ \separator\ }%
+                    {}}}%
+        }{}%
+        \ifcommandkey{location}{%
+            \commandkey{location}%
+            \ifcommandkey{github}{ \separator\ }{}%
         }{}%
         \ifcommandkey{github}{%
             \profilelink{\commandkey{github}}%
@@ -62,7 +68,7 @@
         }{}%
         \ifcommandkey{linkedin}{%
             \profilelink{\commandkey{linkedin}}%
-            
+
         }{}%
     \end{center}
 }
@@ -70,7 +76,7 @@
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 \newcommand{\profilelink}[1]{\href{https://#1}{#1}}
 
-\newkeycommand{\introduction}[fullname,email,phone,linkedin,github,]{
+\newkeycommand{\introduction}[fullname,email,phone,linkedin,github,location,]{
     \printNameTitle{\commandkey{fullname}}
     \printContactInformation
 }
@@ -146,8 +152,8 @@
 }
 
 \newkeycommand{\educationItem}[university,college,program,location,graduation,coursework]{
-{\bf \commandkey{program}} | {\commandkey{university}}\hfill
-{\ifcommandkey{location}{\commandkey{location}}{}} | 
+{\textit{\textbf{\commandkey{program}}}} | {\commandkey{university}}\hfill
+{\ifcommandkey{location}{\commandkey{location}}{}} |
 {\ifcommandkey{graduation}{\textit{\textbf{\commandkey{graduation}}}}{}} \\
 %\ifcommandkey{college}{\commandkey{college}}{} %\\
 %\ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}

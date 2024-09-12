@@ -138,6 +138,14 @@
     \vspace{-11pt}
 }
 
+\newkeycommand{\experienceItemOneLine}[org,title,location,time,summary]{
+    {\commandkey{org}}: {\textit{\textbf{\commandkey{title}}}}%
+    % \ifcommandkey{summary}{: {\commandkey{summary}}}{}%
+    \hfill%
+    % \ifcommandkey{location}{\commandkey{location} | }{}%
+    \ifcommandkey{time}{\textit{\textbf{\commandkey{time}}}}{}%
+}
+
 
 \newkeycommand{\customItem}[title, duration, keyHighlight]{
     \textbf{\commandkey{title}} \hfill {\commandkey{duration}} \\
